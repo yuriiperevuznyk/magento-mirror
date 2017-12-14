@@ -1,0 +1,9 @@
+a:5:{i:0;s:204:"Error in file: "C:\xampp\htdocs\magento-mirror\app\code\core\Mage\Sales\sql\sales_setup\upgrade-1.6.0.9-1.6.0.10.php" - SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'product_type_id'";i:1;s:1020:"#0 C:\xampp\htdocs\magento-mirror\app\code\core\Mage\Core\Model\Resource\Setup.php(644): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 C:\xampp\htdocs\magento-mirror\app\code\core\Mage\Core\Model\Resource\Setup.php(437): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '1.6.0.9', '1.6.0.10')
+#2 C:\xampp\htdocs\magento-mirror\app\code\core\Mage\Core\Model\Resource\Setup.php(320): Mage_Core_Model_Resource_Setup->_upgradeResourceDb('1.6.0.9', '1.6.0.10')
+#3 C:\xampp\htdocs\magento-mirror\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 C:\xampp\htdocs\magento-mirror\app\code\core\Mage\Core\Model\App.php(428): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 C:\xampp\htdocs\magento-mirror\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Model_App->_initModules()
+#6 C:\xampp\htdocs\magento-mirror\app\Mage.php(683): Mage_Core_Model_App->run(Array)
+#7 C:\xampp\htdocs\magento-mirror\index.php(83): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:52:"/magento-mirror/index.php/install/wizard/configPost/";s:11:"script_name";s:25:"/magento-mirror/index.php";s:4:"skin";s:7:"default";}
