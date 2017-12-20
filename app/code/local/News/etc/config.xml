@@ -1,0 +1,51 @@
+<config>
+    <modules>
+        <News>
+            <version>0.2.0</version>
+        </News>
+    </modules>
+
+<frontend>
+    <routers>
+            <news>
+                <use>standard</use>
+                <args>
+                    <module>News</module>                         
+                    <frontName>news</frontName>
+                </args>
+            </news>
+    </routers>
+ </frontend>
+ 
+ 
+<global>
+    <models>
+        <news>
+             <class>News_Model</class>
+            <resourceModel>news_mysql4</resourceModel>
+        </news>
+            <news_mysql4>
+                <class>News_Model_Mysql4</class>
+                        <entities>
+                            <news>
+                                <table>news</table>
+                            </news>
+                        </entities>
+            </news_mysql4>
+    </models>
+    <resources>
+        <news_write>
+            <connection>
+                <use>core_write</use>
+            </connection>
+        </news_write>
+        <news_read>
+            <connection>
+                <use>core_read</use>
+            </connection>
+        </news_read>        
+    </resources>     
+</global>
+ 
+   
+</config>
