@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+
+    <menu>
+
+        ...
+
+        <news translate="title" module="news">
+            <title>News</title>
+            <sort_order>300</sort_order>
+
+            <children>
+                <!-- This is our module identifier -->
+                <news>
+
+                    <title>Manage News</title>
+                    <sort_order>100</sort_order>
+
+                    <!--The action composed by frontname/controller/action-->
+                    <action>news/adminhtml_news/index</action>
+                </news>
+            </children>
+        </news>
+
+    </menu>
+
+    ...
+
+</config>
