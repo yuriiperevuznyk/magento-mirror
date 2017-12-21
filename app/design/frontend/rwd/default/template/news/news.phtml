@@ -1,0 +1,22 @@
+
+<?php 
+//echo ($this->getNewsList());
+?>
+<htlm>
+    <style>
+        p::after {
+            content: "";
+            clear: both;
+            display: table;</style>
+    <body>
+        <?php
+            $items =  $this->getNewsList();
+            foreach($items as $val)
+            {
+                echo '<h3 style="text-align: center">'.$val->getTitle().'</h3>';
+                echo '<p><img src="'.$val->getImage() .'" style="width:120px;height:120px;float:left;margin-right:15px;">' .$val->getContent() .'</p>';
+                echo "<br><br>";
+            }
+        ?>
+    </body>
+<html>

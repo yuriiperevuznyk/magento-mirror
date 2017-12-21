@@ -5,6 +5,19 @@
         </News>
     </modules>
 
+    <admin>
+        <routers>
+            <!--Unique identifier-->
+            <news>
+                <use>admin</use>
+                <args>
+                    <module>News</module>
+                    <frontName>news</frontName>
+                </args>
+            </news>
+        </routers>
+    </admin>
+
 <frontend>
     <routers>
             <news>
@@ -15,10 +28,24 @@
                 </args>
             </news>
     </routers>
+    <layout>
+        <updates>
+            <news>
+                <file>news.xml</file>
+            </news>
+        </updates>
+    </layout>
  </frontend>
  
  
 <global>
+    <helpers>
+        <news>
+            <class>News_Helper</class>
+        </news>
+    </helpers>
+
+
     <models>
         <news>
              <class>News_Model</class>
@@ -44,8 +71,14 @@
                 <use>core_read</use>
             </connection>
         </news_read>        
-    </resources>     
+    </resources>
+    <blocks>
+        <news>
+            <class>News_Block</class>
+        </news>
+    </blocks>
+
+
+
 </global>
- 
-   
 </config>

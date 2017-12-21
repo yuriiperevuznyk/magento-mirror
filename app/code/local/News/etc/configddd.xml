@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    
+    <modules>
+        <News>
+            <version>0.1.0</version>
+        </News>
+    </modules>
+
+    <admin>
+        <routers>
+            <!--Unique identifier-->
+            <news>
+                <use>admin</use>
+                <args>
+                    <module>News</module>
+                    <frontName>news</frontName>
+                </args>
+            </news>
+        </routers>
+    </admin>
+
+    <frontend>
+        <routers>
+            <news>
+                <use>standard</use>
+                <args>
+                    <module>News</module>
+                    <frontName>news</frontName>
+                </args>
+            </news>
+        </routers>
+    </frontend>
+    <global>
+    <models>
+        <news>
+            <class>News_Model</class>
+            <resourceModel>news_resource</resourceModel>
+        </news>
+        <news_resource>
+            <class>News_Model_Resource</class>
+
+            <entities>
+                <news>
+                    <table>news</table>
+                </news>
+            </entities>
+        </news_resource>
+    </models>
+
+        <resources>
+
+            ...
+
+            <!--Add the proper permissions to write using the model Mage::getModel('codealist_backendmodule/vendor') -->
+            <news_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </news_write>
+
+            <!--Add the proper permissions to read using the model Mage::getModel('codealist_backendmodule/vendor') -->
+            <news_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </news_read>
+        </resources>
+        <blocks>
+            <news>
+                <class>News_Block</class>
+            </news>
+        </blocks>
+
+        <helpers>
+            <news>
+                <class>News_Helper</class>
+            </news>
+        </helpers>
+
+    </global>
+
+
+</config>    
+    
